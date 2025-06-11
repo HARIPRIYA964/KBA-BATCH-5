@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling using CSS</title>
+    <style>
+        p{
+            color: #bb1111;
+            background-color: aqua;
+            text-align: center;
+            text-decoration: underline;
+            font-size: larger;
+        }
+        .first{
+            color: #ff6bc1;
+            background-color: rgb(46, 11, 170);
+            text-align: center;
+            text-decoration:line-through;
+            font-size: larger;
+
+        }
+        .navigation{
+            list-style-type: none;
+            display: flex;
+            justify-content: end;
+            background-color: #cc7272;
+            border-radius:5PX;
+            
+        }
+        .navigation li{
+            padding: 14px;
+        }
+        .navigation li a {
+            text-decoration: none;
+
+        }
+        .navigation li a:hover{
+            text-shadow: 4px 3px #6e5757 ;
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+<h1 style="color: rgb(60, 60, 134); background-color: rgb(65, 201, 65); text-align: center; text-decoration: underline; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size:x-large;">Welcome to CSS</h1> 
+<p>Welcome to CSS</p>
+<p class="first">Welcome to CSS</p>
+<nav>
+    <ul class="navigation">
+        <li><a href="">About Us</a></li>
+        <li><a href="">Contact Us</a></li>
+        <li><a href="">Courses</a></li>
+        <li><a href="">Logout</a></li>
+
+    </ul>
+</nav>
+
+</body>
+</html>

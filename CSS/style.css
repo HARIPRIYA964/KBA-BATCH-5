@@ -1,0 +1,10 @@
+.box2{
+    height: 100px;
+    width: 400px;
+    border-style: solid;
+    margin: 60px 54px;
+    padding: 20px 20px;
+    text-align: justify;
+    outline-style: double;
+    box-shadow: 5px 5px 10px #3b38f1f3
+}
