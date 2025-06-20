@@ -1,0 +1,22 @@
+.a{
+    position: relative;
+    left:50px
+}
+.b{
+    position:absolute;
+    right: 100px;
+}
+.coloumn{
+    width:30%;
+    height:320px;
+    float:left;
+    border-left:1px solid #9BCF53 ;
+padding:5px
+}
+.c{
+margin-top: 0px;
+margin-left:0px;
+text-align: justify;
+padding: 15px;
+font-family:monospace;
+}
