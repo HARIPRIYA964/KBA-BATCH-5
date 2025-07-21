@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Scope</title>
+</head>
+<body>
+    <h1>Scope of Functions</h1>
+    <p>Open your browser to see the output</p>
+
+    <script>
+        function outer() {
+            let outervar = 'I am outer'
+            function inner () {
+                console.log('I am inner')
+                console.log(outervar)
+            }
+            inner();
+        }
+        outer();
+    </script>
+</body>
+</html>

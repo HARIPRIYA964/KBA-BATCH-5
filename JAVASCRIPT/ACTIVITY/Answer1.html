@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>1.Program to print a para about yourself using createElement() , textContent & append child.</h2>
+    <div id="para"></div>
+
+    <h2>2. Make an unordered list of cinemas on html page using javascript.</h3>
+    <div id="list"></div>
+
+    <h2>3.Create a dropdown for programming language classes offered on html page using javascript.</h2>
+    <div id="dropdown"></div>
+
+    <h2>4.On the KBA-courses site you created add a radio button showing your experience on KBA(like good, bad, average).</h2>
+    <div id="radiobutton"></div>
+
+    <h2>5.Create a dropdown for list of cakes and print the value of second option.</h2>
+    <div id="cake"></div>
+
+    <!-- 1 -->
+    <script>
+        const para = document.createElement("p")
+        para.textContent = "Blockchain operates as a decentralized distributed database, with data stored across multiple computers, making it resistant to tampering."
+        const para1 = document.getElementById("para")
+        para1.appendChild(para)
+    </script>
+
+<!-- 2 -->
+    <script>
+          const ul = document.createElement("ul")
+        const l1 = document.createElement("li")
+        const l2 = document.createElement("li")
+        const l3 = document.createElement("li")
+
+
+        l1.textContent = "Evil dead"
+        l2.textContent = "The wild robot"
+        l3.textContent = "Jurassic World"
+
+        ul.appendChild(l1)
+        ul.appendChild(l2)
+        ul.appendChild(l3)
+        list.appendChild(ul)
+
+    </script>
+<!-- 3 -->
+    <script>
+
+        const select = document.createElement("select")
+        const option1 = document.createElement("option")
+        const option2 = document.createElement("option")
+        const option3 = document.createElement("option")
+        const option4 = document.createElement("option")
+
+        option1.textContent = "The Great Gatsby"
+        option2.textContent = "1984"
+        option3.textContent = "To Kill a Mockingbird"
+        option4.textContent = "Pride and Prejudice"
+
+        select.appendChild(option1)
+        select.appendChild(option2)
+        select.appendChild(option3)
+        select.appendChild(option4)
+        dropdown.appendChild(select)
+
+    </script>
+<!-- 4 -->
+    <script>
+        const radio = document.getElementById("radiobutton")
+        const radio1 = document.createElement("input")
+        radio1.type= "radio"
+        radio1.name = "feedback"
+        radio.appendChild(radio1)
+        radio.appendChild(document.createTextNode(" Good"));
+
+        const radio2 = document.createElement("input")
+        radio2.type= "radio"
+        radio2.name = "feedback"
+        radio.appendChild(radio2)
+        radio.appendChild(document.createTextNode(" Bad"));
+
+        const radio3 = document.createElement("input")
+        radio3.type= "radio"
+        radio3.name = "feedback"
+        radio.appendChild(radio3)
+        radio.appendChild(document.createTextNode(" Average"));
+
+
+    </script>
+
+    <!-- 5 -->
+
+    <script>
+        const select1 = document.createElement("select")
+        const option5 = document.createElement("option")
+        const option6 = document.createElement("option")
+        const option7 = document.createElement("option")
+
+        option5.textContent = "Redvelet"
+        option6.textContent = "Blackforest"
+        option7.textContent = "Whiteforest"
+
+        select1.appendChild(option5)
+        select1.appendChild(option6)
+        select1.appendChild(option7)
+        cake.appendChild(select1)
+
+        document.write('selected:',option6.value)
+
+
+
+    </script>
+<!-- 6 -->
+    <h2>6.Print your full name storing fname & lname. Print in Uppercase.</h2>
+    <script>
+        let name="Haripriya s";
+        document.write(name.toUpperCase());
+    </script>
+
+    <!-- 7 -->
+    <h3>7.“You can study anything if you have a will to do it”.Take the substrings “You can study”, “you”,”will”,”do it” and combine as a sentence.</h3>
+    <script>
+          let sentent = "You can study anything if you have a will to do it";
+    
+    
+    let sent1 = sentent.substring(0, 13);
+    document.write(sent1, "<br>");
+    
+    let sent2 = sentent.substring(26, 29); 
+    document.write(sent2, "<br>");
+    
+    let sent3 = sentent.substring(36, 41); 
+    document.write(sent3, "<br>");
+    
+    let sent4 = sentent.substring(44, 50);
+    document.write(sent4, "<br>");
+    
+    
+    document.write(sent1 + " " + sent2 + " " + sent3 + " " + sent4);
+    </script>
+<!-- 8 -->
+ <h3>8.“MongoDB is a decentralised distributed ledger . MongoDB can eliminate centralisation.” Replace MongoDB with Blockchain.</h3>
+<script>
+    document.write("MongoDB is a decentralised distributed ledger.MongoDB can eliminate centralisation")
+    let replace="Blockchain"
+    document.write(`<br>${replace} is a decentralised distributed ledger.${replace} can eliminate centralisation.`)
+</script>
+<!-- 9 -->
+ <h3>9.Print the string “MongoDB is a decentralised distributed ledger” using substring/substr. </h3>
+ <script>
+    let str="MongoDB is a decentralised distributed ledger";
+    document.write(str.substring(0,45),"<br>");
+    document.write(str.substr(0,45),"<br>");
+</script>
+<!-- 10 -->
+ <h3>10.Compare “Hello World” & “hEllO World” and display the result & its type. </h3>
+<script>
+     let str1="Hello World";
+    let str2="hEllO World";
+    let result = str1 === str2;
+    document.write(result, "<br>");
+    document.write(`${typeof str1} <br>`);
+    document.write(`${typeof str2} <br>`);
+</script>
+<!-- 11 -->
+<h3>11.Print this statement “ I am ___ yrs of old and my brother is 10 yrs older to me. He is now __ years old.”</h3>
+<script>
+let age = 23;
+let brother_age = age + 10;
+    document.write(`I am ${age} yrs of old and my brother is 10 yrs older to me. He is now ${brother_age} years old.`);    
+</script>
+<!-- 12 -->
+ <h3>Consider this statement “ My name is ________.(declaring fname & lastname in uppercase). I live in ____(uppercase). </h3>
+ <script>
+       let fname = "Haripriya";
+    let lname = "S";
+    let city = "New York";
+    document.write(`My name is ${fname.toUpperCase()} ${lname.toUpperCase()}. I live in ${ city.toUpperCase()}.`);
+ </script>
+ <!-- 13 -->
+ <h3></h3>
+ <script>
+   
+        let statement1 = "I like to play video games.";
+        let statement2 = "I don't like Hide & seek.";
+
+// Change 'like' to 'don't like'
+    statement1 = statement1.replace("like", "don't like");
+    statement2 = statement2.replace("like", "don't like");
+    document.write("<br>" ,statement1);
+    document.write("<br>",statement2);
+
+ </script>
+</body>
+</html>

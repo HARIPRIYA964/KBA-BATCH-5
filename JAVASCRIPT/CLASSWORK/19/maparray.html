@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map with array elements</title>
+    <script>
+        function basicMapArray(){
+            let map = new Map();
+            map.set('name', ['Ram','Raj','Bob']);
+            map.set('age', 25);
+
+            let names = map.get('name');
+            document.getElementById('getNames').innerHTML = 'Names: ' + names.join(', ');
+            let output='';
+            //Array.isArray //boolean value true if value is an array
+            map.forEach((value,key)=>{
+                if(Array.isArray(value)){
+                    output += key + '=' + value.join(', ') + '<br>';
+
+                } else{
+                     output += key + '=' + value + '<br>';
+                }
+            })
+            document.getElementById('iterationOutput').innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+    <h1> Map with Array elements</h1>
+    <button onclick="basicMapArray()">Show Operations</button>
+    <div id="getNames"></div>
+    <div id="iterationOutput"></div>
+</body>
+</html>

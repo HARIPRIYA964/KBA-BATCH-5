@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let k = 153, s =0,temp;
+    temp=k
+    while(temp>0){
+        let am = temp%10;   //getting remainder
+        s = s+(am*am*am)
+        temp = Math.floor(temp/10)  //getting quotient
+        document.write("Remiaining:" , temp,"<br>")
+    }
+    if(s == k){
+        document.write("<br> The number is Armstrong")
+    }
+    else{
+        document.write("<br> The number is not Armstrong")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let  a = 30;
+        let b = 10;
+        let c = 45
+
+        // if else
+
+        if(a>b){
+            document.write( a + " is greater than " + b);
+        }
+        else{
+            document.write( b + " is greater than " + a );
+        }
+
+        // 
+        document.write("<br>")
+
+        // if else if
+        
+        if(a>b && a>c){
+            document.write( a + " is greater than " + b + " and " + c);
+        }
+        else if(b>c && b>a){
+            document.write( b + " is greater than " + a + " and " + c);
+        }
+        else{
+            document.write( c + " is greater than " + a + " and " + b);
+        }
+
+        document.write("<br>")
+        // Given number is odd or even
+        if(a%2==0){
+            document.write(a + " is even number");
+            }
+            else{
+                document.write(a + " is odd number");
+                }
+
+                document.write("<br><br>")
+        // Switch statement
+        let num1 = 10
+        let num2 = 20
+        let x = "*";
+        switch(x){
+            case "+": 
+                document.write(`The sum of  ${num1} and ${num2} is ${num1+num2}`);
+                break;
+            case "-":
+                document.write(`The difference of  ${num1} and ${num2} is ${num1-num2}`);
+                break;
+            case "*":
+                document.write(`The product of  ${num1} and ${num2} is ${num1 *num2}`);
+                break;
+            case "/":
+                document.write(`The division of  ${num1} and ${num2} is ${num1/num2}`);
+                break;
+            default:
+                document.write("Invalid operator");
+                break;
+                }
+        
+        document.write("<br>")
+
+        let z = 5
+        switch(z){
+            case 1 :
+                document.write("One");
+                break;
+            case 2: 
+                document.write("Two");
+            case 3:
+                document.write("Three");
+                break;
+            case 4 :
+                document.write("Four");
+                break;
+            case 5:
+                document.write("Five");
+                break;
+            default:
+                document.write("Invalid number")    
+
+        }
+
+        document.write("<br>")
+        // even or odd
+        let num =25
+        switch(num%2==0){
+            case 0:
+                document.write("Even number");
+                break;
+           default:
+                document.write("Odd number");
+        }
+</script>
+</body>
+</html>

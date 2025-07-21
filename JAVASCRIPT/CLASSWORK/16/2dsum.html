@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=[[1,2,3],[4,5,6],[7,8,9]]
+        let b=[[2,4,6],[8,10,12],[14,16,18]]
+        let s=[[],[],[]]
+        document.write("<br> The length of array is:",a.length)
+        document.write("<br> The number of elements in first row:",a[0].length)
+        if(a.length===b.length){
+            for(i=0;i<a.length;i++){
+                if(a[i].length==b[i].length){
+                    for(j=0;j<3;j++){
+                    s[i][j]=a[i][j]+b[i][j]
+                }
+                }
+                else{
+                     document.write("<br>Addition not possible");
+                }
+                
+            }
+        }
+        else{
+            document.write("<br>Addition not possible");
+        }
+
+        document.write("<br>The sum of array is:")
+         for(i=0;i<3;i++){
+             document.write("<br>")
+            for(j=0;j<3;j++){
+                document.write(" ",s[i][j])
+            }
+           
+        }
+    </script>
+</body>
+</html>

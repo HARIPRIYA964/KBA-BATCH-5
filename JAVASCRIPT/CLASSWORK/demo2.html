@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let a = "3,10,20"
+    document.writeln(typeof a)
+    let l ="Kanyakumari"
+    document.write(l[3] + "<br>")
+    document.write(l[5]+l[6]+l[7]+l[8]+l[9]+l[10]+"<br>")
+    let m = "I like icecream and I like to sleep"
+    document.write(m.length +"<br>")
+    document.write(l.length+"<br>")
+    document.write(m.substring(7,15)+"<br>")
+    document.write(m.substring(0,15)+"<br>")
+    document.write(m.substring(19)+"<br>")
+    document.write(m.slice(6)+"<br>")
+    document.write(m.charAt(9))
+    document.write(`<br> character at  position 2 is: ${m.charAt(2)} <br> `)
+    document.write(m.toUpperCase()+"<br>")
+    document.write(m.toLowerCase()+"<br>")
+    document.write("Icecreame starts at: ",m.search(/icecream/g))
+    document.write("<br> New statement: ",m.replace(/icecream/g,"burger"))
+
+    let url = "www.kba.in";
+    document.write("<br>"+ url.split('.'))
+</script>
+</body>
+</html>

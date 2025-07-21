@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="name"></div>
+   
+        
+    </div>
+
+
+    <script>
+        document.write("hii " +"are " +"you")
+        const element = document.createElement("h1")
+        element.style.color="blue"
+        element.innerHTML = "Good Morning"
+        const element1 = document.getElementById("name")
+        element1.appendChild(element)
+
+        const ul = document.createElement("ul")
+        const l1 = document.createElement("li")
+        const l2 = document.createElement("li")
+
+        l1.textContent = "Apple"
+        l2.textContent = "Orange"
+        ul.appendChild(l1)
+        ul.appendChild(l2)
+        element1.appendChild(ul)
+       
+
+            </script>
+    
+</body>
+</html>

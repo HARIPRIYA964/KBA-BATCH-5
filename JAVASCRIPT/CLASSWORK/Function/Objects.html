@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Object</title>
+</head>
+<body>
+    <h1>Open Your browser console to see output</h1>
+    <script>
+        // object in js
+        let person = {
+            name: "Ram",
+            age: 20,
+            city: "Trivandram",
+            greet: function(){           //Anonimus function
+                console.log("Hello, " + this.name);
+
+            }
+            }
+            console.log(person.name)
+            console.log(person.age)
+            console.log(person.city)
+            person.greet();
+    </script>
+</body>
+</html>

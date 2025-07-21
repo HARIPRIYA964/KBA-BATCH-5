@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("<b>1.JS program to find the sum of the elements in array.</b><br>")
+        let arr = [1, 2, 3, 4, 5]
+        let sum = 0
+        for (let i = 0; i<arr.length; i++) {
+            sum = sum + arr[i]
+            }
+            document.write(" Sum of the elements in array is: " + sum)
+
+        // 2
+        document.write("<br><br><b>2.JS program to store & print even numbers upto 20 in an array</b>")
+        let even = []
+        for (let i = 1; i<= 20;i++){
+            if (i % 2 == 0){
+                even.push(i)
+                }
+        }
+        document.write(" Even numbers upto 20 are: " + even)
+
+        // 3
+        document.write("<br><br><b>3.JS program to check whether a number is in the array and if present print the location</b>")
+        let num = [1, 2, 3, 4, 5]
+        searchnum = 3
+        for (let i=0; i<num.length; i++){
+            if (num[i] == searchnum){
+                document.write("<br>Number is present at location: " + i)
+            }
+
+        }
+
+        // 4
+        document.write("<br><br><b>4.JS program to remove an element pesent in a specific location</b>")
+            let num1 = [1, 2, 3, 4, 5]
+            let r = 3
+            for(let i = r; i< 5; i++){
+                num1[i] = num1[i+1]
+                }
+                num1.pop()
+                document.write("<br>rray after removing element at location 3 is: " + num1)
+
+        // 5
+        document.write("<br><br><b>5.JS program to copy an element in an aaray to another array</b>")
+        let num2 = [1, 2, 3, 4, 5]
+        let num3 = []
+        for (let i = 0; i<num2.length ; i++){
+            num3.push(num2[i])
+            }
+            document.write(" Array num2 is: " + num2)
+            document.write("<br> Array num3 is: " + num3)
+
+        // 6
+        document.write("<br><br><b>6.Print the pattern</b><br><br>")
+        for (let i = 1; i<= 3; i++){
+            for (let j = 1; j<=i ; j++){
+                document.write(i + " ")
+                }
+                document.write("<br>")
+                }
+        
+        
+        document.write("<br><br>")
+        for(let i=1;i<=3;i++){
+        for(let j=1;j<=3;j++){
+            document.write( + 2 + " ")
+            }
+            document.write("<br>")
+            }
+
+        document.write("<br><br>")
+        for(let i=1;i<=3;i++){
+        for(let j=1;j<=4-i;j++){
+            document.write(i + " ")
+            }
+            document.write("<br>")
+            }
+        // 7
+        document.write("<br><br><b>7.JS program to read array a=[20,25,30,35,40,45] and divide the array in to two seperate arrays having equal number of elements.</b>")
+        let a = [20,25,30,35,40,45]
+        let arr1 =[]
+        let arr2 =[]
+        let i = 0
+        for(x of a){
+            if(i < a.length /2){
+                arr1.push(x)
+                }else{
+                    arr2.push(x)
+                    }
+                    i ++
+                    }
+                    document.write("<br>Orginal Array is : ",a);
+                    document.write("<br>Array 1 is :",arr1);
+                    document.write("<br>Array 2 is : ",arr2);
+
+    // 8
+    document.write("<br><br><b>8.JS program to concatinate two arrays a=[1,2,3,4] & b=[5,6,7,8] into a single array</b>")
+    let b = [1,2,3,4]
+    let c = [5,6,7,8]
+    let result = []
+    for(y of b){
+        result.push(y)
+    }
+    for (y of c) {
+                result.push(y)
+                }
+                document.write("<br>Array b is : ", b);
+                document.write("<br>Array c is : ", c);
+                document.write("<br>Array b and c is : ", result);
+    
+    // 9
+    document.write("<br><br><b>9.JS program to read an array and sort in ascending and descending order</b>")
+    arr = [20,63,67,90,11,70]
+    arr = [64, 34, 25, 12, 22, 11, 90]
+        for(i=0; i<arr.length; i++){
+            for(j=0; j<arr.length-i; j++){
+                if(arr[i]>arr[j]){
+                    temp = arr[i]
+                    arr[i] = arr[j]
+                    arr[j] = temp
+                    }
+                    }
+                    }
+                    document.write("<br>Array is : ", arr);
+                    document.write("<br>Array in ascending order is : ", arr);
+                    document.write("<br>Array in descending order is : ", arr.reverse());
+
+    // 10
+    document.write("<br><br><b>Write a program to read the array [1,6,7,8,2,3,4,2,2].Find the occurance of 2 in this array.</b>") 
+       let arr3 = [1, 6, 7, 8, 2, 3, 4, 2, 2]
+       let count = 0
+       for (x of arr3) {
+        if (x == 2) {
+            count++
+            }
+            }
+            document.write("<br>Occurance of 2 in array is : ", count);
+            
+
+    </script>
+</body>
+</html>

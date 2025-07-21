@@ -169,16 +169,15 @@ font-size: 15px;
 
 .container{
     display: flex;
-margin-left: 1490px;
+margin-left: 1300px;
 margin-top: 30px;   
- border-radius:10PX;
  font-size:25px;
 
 }
 
 .container .a1 a{
     text-decoration: none;
-    padding: 17px;
+    padding: 18px;
     color: #ffffff;
 }
 
@@ -193,14 +192,168 @@ margin-top: 30px;
     height: 40px;
     padding-left: 20px;
     padding-top: 10px;
-    color:rgb(2, 2, 110)
+    color:rgb(2, 2, 110);
+    margin-left: 20px;
+    
     
   
 }
-.container1 h1{
+.container3 h1{
     text-align: center;
     padding-top: 170px;
     font-size: 40px;
     color: rgb(90, 3, 7);
     text-shadow: 4px 3px #925d5d ;
 }
+
+/* View Book */
+.container1{
+    display: flex;
+margin-left: 1500px;
+margin-top: 30px;   
+ font-size:25px;
+
+}
+
+.container1 .a4 a{
+    text-decoration: none;
+    padding: 18px;
+    color: #ffffff;
+}
+
+.container1 .a4{
+    padding-top: 10px;
+}
+
+.container2{
+    display: flex;
+    margin-top: 80px;
+}
+
+.books{
+    background-color: rgb(230, 237, 240);
+    width: 310px;
+    height: 415px;
+    border-radius: 10px;
+    margin-left: 100px;
+    box-shadow: 0 0 20px rgba(235, 231, 231, 0.911) ;   
+}
+
+.books img{
+    width: 230px;
+   margin-left: 45px;
+   margin-top:30px;
+}
+
+.books h3{
+    padding-left: 90px;
+    color: rgb(90, 3, 7);
+}
+
+.books span{
+    padding-left: 110px;
+    color: rgb(122, 122, 122);
+}
+
+.books button{
+ background-color: rgb(90, 3, 7);
+width: 100px;
+height: 35px;
+margin-left: 110px;
+margin-top: 20px;
+}
+
+.books button a{
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+}
+
+
+.books .book1{
+    padding-left: 76px;
+    color: rgb(90, 3, 7);
+}
+
+
+/* Dashboard */
+.index1{
+    background-image: url(/IMAGES/image2.jpg);
+    background-size: cover;
+    background-position: top;
+}
+
+.container5 h1{
+    text-align: center;
+    padding-top: 350px;
+    font-size: 50px;
+    color: rgb(2, 8, 22);
+    text-shadow: 4px 3px #a8a6b1 ;
+}
+
+/* Add Book */
+
+.AddBook{
+  
+    width: 100%;
+    height: 100px;
+    padding: 80px;
+     
+}
+
+ .add{
+    width: 350px;
+    height: 400px;
+    background-color:white;
+    margin-left: 25%;
+    color:rgb(90, 3, 7);
+    padding: 80px;
+    box-shadow: 0 45px 65px rgba(0,0,0,0.50), 0 35px 22px rgba(0,0,0,0.16);
+   
+ }
+
+.add .text1{
+    font-size: 50px;
+    
+
+}
+
+.add div {
+    margin-top: 10px;
+}
+
+.add .text2{
+    font-size: 20px;
+    
+
+}
+
+.add .text3{
+    width: 335px;
+    height: 30px;
+}
+
+.add .text4{
+    width:340px;
+    height: 40px;
+}
+
+.add .text5{
+    
+    padding: 10px;
+    padding-left: 140px;
+   
+}
+
+.add .text5 button{
+    height: 30px;
+    width: 90px;
+    background-color: rgb(90, 3, 7);
+}
+
+
+.text5 button a{
+    text-decoration: none;
+    color: white;
+}
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Iteration</title>
+    <script>
+        function basicMapOperations(){
+            let map = new Map();
+            map.set('name', 'Raj');
+            map.set('age', 20);
+            map.set('city', 'TVM');
+            document.getElementById('getName').innerHTML = 'Name: ' + map.get('name');
+            document.getElementById('getAge').innerHTML = 'Age: ' + map.get('age');
+            document.getElementById('getCity').innerHTML = 'City: '+ map.get('city');
+            let output='';
+            map.forEach((value,key)=>{
+                output += key + '=' + value + '<br>';
+            });
+            document.getElementById('iterationOutput').innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+ <h1>Map Iteration</h1>
+ <button onclick="basicMapOperations()">Start Iteration</button>
+ <div id="getName"></div>
+ <div id="getAge"></div>
+ <div id="getCity"></div>
+ <div id="iterationOutput"></div>   
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+<body>
+    <h1>Arrow function introduction</h1>
+    <p>Open browser console to see output</p>
+
+    <script>
+        let add = function(a,b){
+            return a+b;
+        }
+        let addArrow = (a,b) => a+b;
+
+        console.log("Regular function output:",add(5,7));
+        console.log("Arrow function output:",addArrow(5,7));
+
+        // Set Timeout
+
+        let person = {
+            name: "Ram",
+            age: 20,
+            greet: function(){
+                setTimeout(() =>{
+                    console.log("Hello " + this.name + " with age " + this.age);
+                },10000)
+            }
+        }
+        person.greet() // function call
+    </script>
+</body>
+</html>

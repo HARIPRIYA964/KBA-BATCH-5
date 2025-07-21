@@ -1,0 +1,339 @@
+.container{
+    background-color: #218091;
+    width: 400px;
+    height: 390px;
+    margin-top: 300px;
+    margin-left: 760px;
+
+}
+
+.container h1{
+    color: white;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+.content1{
+    position: relative;
+    width: 220px;
+    margin-left: 50px;
+    margin-top: 26px;
+}
+
+.content1 input{
+    width: 100%;
+    padding-left: 30px; /* Leave space for the icon */
+    height: 40px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: #218091;
+    color: white;
+}
+
+.content1 svg{
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    margin-top: -10px;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    color: white;
+  
+}
+
+.content1 input::placeholder{
+    color: white;
+    padding-left: 20px;
+}
+
+.content2{
+    padding-left: 49px;
+}
+
+.content2 .log{
+    text-decoration: none; 
+    padding-left: 10px;
+    color: #511010;
+}
+
+button{
+    width: 120px;
+    height: 35px;
+    padding-right: 15px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+button a{
+    color:#218091 ;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* login */
+
+.container1{
+    background-color: #218091;
+    width: 400px;
+    height: 330px;
+    margin-top: 300px;
+    margin-left: 760px;
+
+}
+
+.container1 h1{
+    color: white;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+/* Home Page */
+
+.index{
+    margin-top: 200px;
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+.index a{
+    text-decoration: none;
+    
+}
+
+.container2{
+    margin-left: 1600px;
+    margin-top: 30px;   
+     font-size:23px;
+ 
+}
+
+.container2 .a1{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #3A94D4;
+    padding: 6px 19px;
+}
+
+.container2 .a2{
+    text-decoration: none;
+    padding-left: 29px;
+    color: #030303;
+    font-weight: bold;
+}
+
+.container3{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.container3 h1{
+    font-size: 60px;
+}
+
+.container4{
+   text-align: center;
+   margin-top: 50px;
+}
+
+.container4 img{
+    width: 200px;
+    height: 200px;
+
+}
+
+.conatiner5{
+    text-align: center;
+    margin-left: 70px;
+}
+
+.conatiner5 input{
+    width: 250px;
+    height: 30px;
+    background-color: rgb(201, 198, 198);
+    border: 1px solid rgb(2, 2, 2)
+}
+
+.conatiner5 button{
+    width: 70px;
+    padding-left: 10px;
+    border-radius: 0;
+    background-color: #3A94D4;
+    border: 0;
+    color: white;
+    font-weight: bold;
+}
+
+.conatiner5 input::placeholder{
+    padding-left: 10px;
+    color: rgb(100, 100, 100);
+}
+
+/* Issue Certificate */
+
+.container2 .a4{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #3A94D4;
+    padding: 6px 19px;
+
+
+}
+
+.container2 .a3{
+    text-decoration: none;
+    padding-left: 20px;
+    color: #030303;
+    font-weight: bold;
+}
+
+.issue{
+    margin-left: 20px;
+}
+
+
+.issue1{
+    background-color: white;
+    width: 1000px;
+    height: 680px;
+    margin-left: 450px;
+    margin-top: 70px;
+}
+ .issue2{
+    margin-left: 120px;
+    
+ }
+
+ .issue2 h1{
+    padding-top: 70px;
+    padding-bottom: 20px;
+ }
+
+ .issue2 p{
+    margin-top: 15px;
+ }
+
+ .issue2 select{
+    width: 500px;
+    height: 39px;
+    color: #969595;
+ }
+
+ 
+
+ .issue2 input{
+    width: 495px;
+    height: 35px;
+  
+ }
+
+ input[type="date"] {
+        color: #969595;
+ }
+
+ .issue2 input::placeholder{
+    color: #969595;
+ }
+
+ .issue2 button {
+    width: 200px;
+    padding-left: 10px;
+    border-radius: 4;
+    background-color: #3A94D4;
+    border: 0;
+  
+ }
+
+ .issue2 button a{
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+ }
+
+ /* View Certificate */
+
+ .view1{
+    background-color: white;
+    width:1000px;
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+    height: 800px;
+    border: 1px solid rgb(2, 2, 2);
+    margin-top: 10px;
+ }
+
+ .view2{
+    background-color: white;
+    width:800px;
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+    height: 630px;
+    border: 1px solid rgb(2, 2, 2);
+    margin-top: 80px;
+   
+ }
+
+ .view2 h1{
+    text-align: center;
+    padding-top: 100px;
+ }
+
+ .view3{
+    text-align: center;
+ }
+
+ .view3 img{
+    width: 150px;
+    margin-top: 20px;
+
+ }
+ 
+ .view4{
+    display: flex;
+   margin-left: 320px;
+   margin-top: 10px;
+ }
+
+ .view4 h3 {
+    margin-top: 13px;
+    margin-left: 6px;
+   
+ }
+
+  
+ .view5{
+    display: flex;
+    margin-left: 200px;
+    margin-top: -10px;
+ }
+
+ .view5 h3 {
+    margin-top: 13px;
+    margin-left: 6px;
+ }
+  
+ .view6{
+    display: flex;
+    margin-left: 320px;
+    margin-top: -10px;
+ }
+
+ .view6 h3 {
+    margin-top: 13px;
+    margin-left: 6px;
+    margin-right: 4px;
+ }
+
+ .view7{
+    display: flex;
+ }
+
+ .view7 a svg{
+    width: 40px;
+    padding-left: 40px;
+    padding-top: 20px;
+    color: black;
+ }
