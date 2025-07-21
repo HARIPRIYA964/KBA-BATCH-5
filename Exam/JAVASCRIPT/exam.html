@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        .completed{
+            text-decoration: line-through; 
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <label for="title">Enter a title:</label>
+    <input type="text"  id="title"><br><br>
+    <label for="author">Enter  a  author:</label>
+    <input type="text" id="author">
+    <button onclick="addBook()"> Add Book</button>
+    <ul id="BookList"></ul>
+    <button onclick="viewBook()">View All Book</button>
+    <ul id="viewBookList"></ul>
+    <button onclick=" issuedBook()">Issued Book</button>
+    <ul id="issuedBookList"></ul>
+
+    <script >
+    let books = [];
+    let viewAllBook =[]
+    let issuedBook = [];
+
+function addBook() {
+    const titleInput = document.getElementById('title');
+    const authorInput = document.getElementById('author');
+    const BookList = document.getElementById('BookList');
+
+    const title = titleInput.value.trim();
+    const author = authorInput.value.trim();
+
+    if (title && author) {
+        const book = { title, author };
+        books.push(book);
+
+        const li = document.createElement('li');
+        li.textContent = `title: ${title} <br> Author :  ${author}`; 
+
+ 
+        const completeButton = document.createElement('button');
+        completeButton.textContent = 'Completed';
+        completeButton.onclick = function () {
+            li.classList.toggle('completed');
+        };
+        li.appendChild(completeButton);
+
+        // Issue books to users
+        const issueButton = document.createElement('button');
+        issueButton.textContent = 'Issue';
+        issueButton.onclick = function () {
+            const issueBook = prompt('Enter the name of the user:' );
+            if(issueBook){
+                const issueLi = document.createElement('li');
+                issueLi.textContent = `Issue to : ${issueBook}`;
+                BookList.appendChild(issueLi);
+                }
+                };
+                li.appendChild(issueButton);
+                BookList.appendChild(li);
+
+        // delete book
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.onclick = function () {
+            BookList.removeChild(li);
+            titles.splice(titles.indexOf(title), 1);
+            authors.splice(authors.indexOf(author), 1);
+            };
+            li.appendChild(deleteButton);
+
+     
+        BookList.appendChild(li);
+        titleInput.value = '';
+        authorInput.value = '';
+    } else {
+        alert('Please enter both title and author');
+    }
+}
+
+function viewBook(){
+    const  viewList = document.getElementById('viewBookList');
+    viewList.textContent = '';
+   if(books.length ===0){
+    viewList.textContent = 'No books available';
+    } 
+    else {
+        for (let i = 0; i < books.length; i++) {
+        const li = document.createElement('li');
+        li.textContent = `title: ${books[i].title} <br> Author :  ${books[i].author} `;
+        viewList.appendChild(li);
+        }
+
+   }
+    }
+
+    </script>
+</body>
+</html>
