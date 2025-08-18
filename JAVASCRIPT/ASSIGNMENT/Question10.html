@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Answer 10</title>
+</head>
+<body>
+    <div class="bg-gray-700 w-[420px] h-[300px]  mt-[300px] ml-[700px] rounded shadow-2xl text-white pt-10 ">
+     <label for="" class="pl-7">Enter the elements:</label>
+    <input type="text" id="element" placeholder="eg:5,10,15" class="border w-[200px] ml-6 h-10 pl-3"><br><br>
+    <button onclick="Maximum()" class="bg-yellow-700 w-[100px] h-8 ml-[180px]">Maximum</button>
+    <p id="output" class="pl-7 pt-6"></p>
+</div>
+
+    <script>
+        function Maximum() {
+            let array = [];
+            let element = document.getElementById("element").value;
+            const arr = element.split(",");
+            array = arr.map(Number);  
+            let maxElement = Math.max(...array);
+
+
+document.getElementById("output").textContent = "Maximum element is: " + maxElement;
+}
+    </script>
+</body>
+</html>

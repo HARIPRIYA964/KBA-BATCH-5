@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Answer 4</title>
+</head>
+<body>
+    <div class="bg-gray-700 w-[400px] h-[330px]  mt-[300px] ml-[700px] rounded shadow-2xl text-white ">
+ <div class="pt-10 pl-10">
+    <label for="Name">Name</label>
+    <input type="text" id="Name" class="border h-9 ml-5"><br><br>
+ </div>
+    <button onclick="addStudent()" class="bg-yellow-700 w-[130px] h-10 ml-36">Add Student</button><br>
+
+   <div class="pt-6 pl-20">
+    <label for="rollNo" class="">Roll Number:</label>
+    <select id="rollNo">
+        <option value="">Select Roll Number</option>
+    </select>
+   </div>
+    <button onclick="displayName()" class="bg-yellow-700 w-[130px] h-10 ml-36 mt-7">Show Name</button>
+    
+    <p id="result" class="pt-6 pl-34"></p>
+  </div>
+
+    <script>
+        const students = [];
+
+        function addStudent() {
+            const name = document.getElementById("Name").value;
+            if (name) {
+                students.push(name);
+                const rollNo = document.getElementById('rollNo');
+                const option = document.createElement('option');
+                option.value = students.length - 1;
+                option.text = students.length;
+                rollNo.add(option);
+                document.getElementById("Name").value = "";
+            } else {
+                alert("Please enter a name");
+            }
+        }
+
+        function displayName() {
+            const rollNo = document.getElementById('rollNo').value;
+            const result = document.getElementById('result');
+
+            if (rollNo !== "") {
+                result.innerText = "Student Name: " + students[rollNo];
+            } else {
+                result.innerText = "Please select a roll number";
+            }
+        }
+    </script>
+</body>
+</html>

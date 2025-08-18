@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Answer 5</title>
+</head>
+<body>
+    <div class="bg-gray-700 w-[550px] h-[750px]  mt-[60px] ml-[700px] rounded shadow-2xl text-white  pl-[50px] ">
+  <div>
+    <h1 class="text-2xl text-red-400 pt-7">Area of Square</h1>
+    <label for="side" class="">Enter the side of the square:</label>
+    <input type="number" id="side" class="border mt-5 h-8  ml-2 pl-3"><br><br>
+    <button onclick="AreaOfSquare()" class="bg-yellow-700 ml-[180px] w-34 h-8">Area of Square</button>
+    <p id="result1" class="pt-5"></p>
+  </div>
+
+   <div>
+    <h1 class="text-2xl text-red-400 pt-10">Area of Rectangle</h1>
+    <label for="breadth">Enter the length :</label>
+    <input type="number" id="length" class="border w-[300px] mt-5 h-8  ml-8 pl-3"><br><br>
+    <label for="breadth">Enter the breadth :</label>
+    <input type="number" id="breadth" class="border mt-5 h-8 w-[300px] ml-5 pl-3"><br><br>
+    <button onclick="AreaOfRectangle()" class="bg-yellow-700 ml-[180px] w-34 h-8">Area of Rectangle</button>
+    <p id="result2"  class="pt-5"></p>
+   </div>
+
+   <div>
+    <h1 class="text-2xl text-red-400 pt-10">Area of Circle</h1>
+    <label for="radius">Enter radius :</label>
+    <input type="number" id="radius" class="border mt-5 h-8 w-[340px] ml-5 pl-3"><br><br>
+    <button onclick="AreaOfCircle()" class="bg-yellow-700 ml-[180px] w-34 h-8">Area of Circle</button>
+    <p id="result3"  class="pt-5"></p>
+   </div>
+</div>
+
+
+    <script>
+        function AreaOfSquare() {
+            const side = document.getElementById("side").value;
+            const result1 = document.getElementById("result1")
+            if(side>0){
+                const Area = side * side;
+                result1.innerText = `The area of square is ${Area}`;
+            }
+            else{
+                result1.innerText = "Not founded!"
+                }
+                }
+
+                function AreaOfRectangle() {
+                    const length = document.getElementById("length").value;
+                    const breadth = document.getElementById("breadth").value;
+                    const result2 = document.getElementById("result2")
+                    if(length>0 && breadth>0){
+                        const Area = length * breadth;
+                        result2.innerText = `The area of rectangle is ${Area}`;
+                        }
+                        else{
+                            result2.innerText = "Not founded!"
+                            }
+                            }
+
+            function AreaOfCircle() {
+                const radius = document.getElementById("radius").value;
+                const result3 = document.getElementById("result3")
+                if(radius>0){
+                    const Area = 3.14 * radius * radius;
+                        result3.innerText = `The area of circle is ${Area}`;
+                    }
+                    else{
+                        result3.innerText = "Not founded!"
+                    }
+            }
+    </script>
+</body>
+</html>

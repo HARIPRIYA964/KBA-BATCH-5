@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Answer 9</title>
+</head>
+<body>
+    <div class="bg-gray-700 w-[450px] h-[590px]  mt-[300px] ml-[700px] rounded shadow-2xl text-white pt-10 ">
+       
+            <label for="studentName" class="pl-7">Name:</label>
+            <input type="text" id="studentName" class="w-[320px] h-10 px-4 border ml-3.5 "><br><br>
+            <label for="studentMark" class="pl-7">Mark:</label>
+            <input type="number" id="studentMark" class="w-[320px] h-10 px-4 border ml-5">
+        <button onclick="addStudent()" class="bg-yellow-700 w-[100px] h-8 mt-4 ml-[190px] mb-7">Submit</button>
+        <p id="addResult" class="text-center mb-6"></p>
+            <label for="searchName" class="pl-7">Search Student Name:</label>
+            <input type="text" id="searchName" class="w-[200px] h-10 px-4 border ml-5 ">
+        <button onclick="searchStudent()" class="bg-yellow-700 w-[100px] h-8 mt-4 ml-[196px] mb-7">Search</button>
+        <p id="searchResult" class="text-center  mb-6"></p>
+
+            <h4 class="pl-7">Calculate class average mark</h4>
+            <button onclick="calculateAverage()" class="bg-yellow-700 text-white w-[150px] h-8 mt-4 ml-[196px] mb-7 ">Class Average</button>
+            <p id="classAverageResult" class="text-center mb-6 "></p>
+    </div>
+
+    <script>
+        const students = [];
+
+        function addStudent() {
+            const name = document.getElementById('studentName').value.trim();
+            const mark = parseFloat(document.getElementById('studentMark').value.trim());
+
+            if (!name || isNaN(mark) || mark<0 || mark > 100) {
+                document.getElementById('addResult').textContent = "Please enter a valid name and mark (0-100).";
+                return;
+            }
+
+            students.push({ name, mark });
+            document.getElementById('addResult').textContent = `Student "${name}" with mark ${mark} added successfully!`;
+
+            document.getElementById('studentName').value = "";
+            document.getElementById('studentMark').value = "";
+        }
+
+        function searchStudent() {
+            const searchName = document.getElementById('searchName').value.trim();
+            if (!searchName) {
+                document.getElementById('searchResult').textContent = "Please enter a name to search.";
+                return;
+            }
+
+            const student = students.find(student => student.name.toLowerCase() === searchName.toLowerCase());
+
+            if (student) {
+                document.getElementById('searchResult').textContent = `Mark of ${student.name}: ${student.mark}`;
+            } else {
+                document.getElementById('searchResult').textContent = `No student found with name "${searchName}".`;
+            }
+        }
+
+        function calculateAverage() {
+            if (students.length === 0) {
+                document.getElementById('classAverageResult').textContent = "No student data available to calculate average.";
+                return;
+            }
+
+            const totalMarks = students.reduce((total, student) => total + student.mark, 0);
+
+            const average = totalMarks/students.length;
+
+            document.getElementById('classAverageResult').textContent = `Class Average Mark: ${average.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

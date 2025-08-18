@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="bg-gray-700 w-[420px] h-[380px]  mt-[300px] ml-[700px] rounded shadow-2xl text-white pt-10 ">
+     <label for="" class="pl-7">Name of Subject:</label>
+    <input type="text" id="subject" class="border border-white w-[200px] h-10 pl-3 ml-8 "><br><br>
+    <label for="" class="pl-7">Mark:</label>
+    <input type="number" id="mark" class="border border-white ml-29 w-[200px] h-10 pl-3"><br>
+    <button onclick="add()" class="bg-yellow-700 w-20 h-7 ml-[160px] mt-8">Submit</button>
+    <p id="result" class="pl-7 pt-6"></p>
+  </div>
+
+    <script>
+        function add() {
+            const subject = document.getElementById("subject").value;
+            const mark = document.getElementById("mark").value;
+
+            if(mark >= 90){
+                document.getElementById('result').textContent = `You scored ${mark} in ${subject} and got A+ grade.`
+            }
+            else if(mark >= 80){
+                document.getElementById('result').textContent = `You scored ${mark} in ${subject} and got A grade.`
+                }
+                else if(mark >= 70){
+                    document.getElementById('result').textContent = `You scored ${mark} in ${subject} and got B+ grade.`
+                    }
+                    else if(mark >= 60){
+                        document.getElementById('result').textContent = `You scored ${mark} in ${subject} and got c+ grade.`
+                        }
+                        else if(mark >= 50){
+                            document.getElementById('result').textContent = `You scored ${mark} in ${subject} and got c grade.`
+                            }
+                            else{
+                                document.getElementById('result').textContent = `You scored ${mark} in ${subject} and failed.`
+                            }
+                            }
+    </script>
+</body>
+</html>

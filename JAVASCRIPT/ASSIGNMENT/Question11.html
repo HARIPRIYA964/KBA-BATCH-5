@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Answer 11</title>
+</head>
+<body>
+    <div class="bg-gray-700 w-[420px] h-[300px]  mt-[300px] ml-[700px] rounded shadow-2xl text-white pt-20 ">
+        <input type="text" id="num" placeholder="Enter a number" class="pl-3 border ml-22"><br><br>
+        <button onclick="reverseNumber()" class="bg-yellow-700 w-[100px] h-8 ml-40">Reverse</button>
+        <p id="result" class="pl-[130px] pt-5"></p>
+    </div>
+
+    <script>
+        function reverseNumber() {
+            let num = document.getElementById("num").value;
+
+            let rev = num.split('').reverse().join('');
+
+            document.getElementById("result").innerHTML = `Reversed Number: ${rev}`;
+        }
+    </script>
+</body>
+</html>

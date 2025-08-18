@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Answer 7</title>
+</head>
+<body>
+    <div class="bg-gray-700 w-[380px] h-[380px]  mt-[300px] ml-[700px] rounded shadow-2xl text-white pt-10 ">
+        <div class="pl-10">
+            <input type="text" id="element" placeholder="Enter a number" class="border h-10 pl-3  w-[295px]"><br>
+            <button onclick="add()" class="bg-yellow-700 w-[100px] mt-5 ml-[100px] h-8 rounded-md font-bold">Add</button>
+        </div>
+
+        <div class="pl-10 pt-5">
+            <input type="text" id="search" oninput="searchArray()" placeholder="Search for a number" class="border h-10 pl-3  w-[295px]">
+            <p id="searchResult" class="pt-5"></p>
+        </div>
+
+        <div class="pl-10 pt-5">
+            <p id="indexElement">  element is: </p>
+            <p id="sortedArray">The array in sorted order is: </p>
+            <p id="reverseArray">The reversed array is: </p>
+        </div>
+    </div>
+
+    <script>
+        let array = [];  
+
+        function add() {
+            let element = document.getElementById("element").value;
+            let num = Number(element);
+            if (!isNaN(num)) { 
+                array.push(num);
+                updateDisplay();
+            } else {
+                alert("Please enter a valid number.");
+            }
+            document.getElementById("element").value = ""; 
+        }
+
+        function updateDisplay() {
+            
+            const indexElement = document.getElementById("indexElement");
+            indexElement.textContent = `Index 0 element is: ${array[0] !== undefined ? array[0] : "Array is empty"}`;
+            
+          
+            const sortedArray = document.getElementById("sortedArray");
+            sortedArray.textContent = `The array in sorted order is: ${[...array].sort((a, b) => a - b).join(", ")}`;
+            
+           
+            const reverseArray = document.getElementById("reverseArray");
+            reverseArray.textContent = `The reversed array is: ${[...array].reverse().join(", ")}`;
+        }
+
+        function searchArray() {
+            let searchInput = document.getElementById("search").value;
+            let num = Number(searchInput);
+
+            if (searchInput === "") {
+                document.getElementById("searchResult").textContent = ""; 
+            } else if (!isNaN(num)) {
+                if (array.includes(num)) {
+                    document.getElementById("searchResult").textContent = `${num} is in the entered array.`;
+                } else {
+                    document.getElementById("searchResult").textContent = `${num} is not in the entered array.`;
+                }
+            } else {
+                document.getElementById("searchResult").textContent = "Please enter a valid number.";
+            }
+        }
+    </script>
+</body>
+</html>

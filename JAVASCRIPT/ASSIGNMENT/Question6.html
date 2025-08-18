@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Answer 6</title>
+</head>
+<script>
+     const ElementArray = [];
+     function addArray() {
+         const element = document.getElementById('inputField').value.trim();
+         const result = document.getElementById('arrayOutput');
+         if (element === "") {
+            result.textContent = "Please enter a valid value.";
+            return;
+        }
+        ElementArray.push(element);
+        document.getElementById('inputField').value = "";
+        result.textContent = `Value "${element}" saved!`;
+    }
+    function printArray() {
+    const result = document.getElementById('arrayOutput');
+
+    if (ElementArray.length === 0) {
+        result.textContent = "The array is empty.";
+    } else {
+        result.textContent = `The Entered Array is : [${ElementArray.join(", ")}]`;
+    }
+}
+</script>
+<body>
+    <div class="bg-gray-700 w-[440px] h-[250px]  mt-[300px] ml-[700px] rounded shadow-2xl text-white pt-10 ">
+    <label class=" pl-[40px] ">Enter element:</label>
+    <input type="text" id="inputField" class="border w-[230px] h-10 ml-4"><br><br>
+   <div class="flex gap-10 ml-26 mt-5  ">
+    <button onclick='addArray()' class="bg-green-800 w-[100px] h-9 rounded-md hover:bg-green-600 ">Save</button>
+    <button onclick="printArray()" class="bg-red-800 w-[100px] h-9 rounded-md hover:bg-red-600">View Array</button>
+   </div>
+    <p id="arrayOutput" class="text-center pt-8"></p>
+   </div>
+</body>
+</html>

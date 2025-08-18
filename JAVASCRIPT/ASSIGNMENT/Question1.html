@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Answer 1</title>
+
+</head>
+<body class="flex justify-center items-center h-[300px] bg-[#f3f3f3] " >
+    <div class="bg-[#fff] border borde-[#ccc] rounded-2xl w-[300px] p-[20px] shadow-2xl shadow-[rgba(0, 0, 0, 0.1)] mt-[600px]">
+        <div id="display" class="h-[50px] bg-[#f7f7f7] border border-[#ccc] rounded-xl text-right p-[10px] text-xl mb-[20px]">0</div>
+        <div class="grid grid-cols-4 gap-[10px] ">
+            <button class="text-white text-xl h-[50px] bg-[#7a9abd] rounded-lg hover:bg-[#0c5db4]" onclick="appendNumber('7')">7</button>
+            <button class="text-white text-xl h-[50px] bg-[#7a9abd] rounded-lg hover:bg-[#0c5db4]" onclick="appendNumber('8')">8</button>
+            <button class="text-white text-xl h-[50px] bg-[#7a9abd] rounded-lg hover:bg-[#0c5db4]" onclick="appendNumber('9')">9</button>
+            <button class="text-white text-xl h-[50px] bg-[#7a9abd] rounded-lg hover:bg-[#0c5db4]" onclick="setOperation('/')">÷</button>
+            <button class="text-white text-xl h-[50px] bg-[#7a9abd] rounded-lg hover:bg-[#0c5db4]" onclick="appendNumber('4')">4</button>
+            <button class="text-white text-xl h-[50px] bg-[#7a9abd] rounded-lg hover:bg-[#0c5db4]" onclick="appendNumber('5')">5</button>
+            <button class="text-white text-xl h-[50px] bg-[#7a9abd] rounded-lg hover:bg-[#0c5db4]" onclick="appendNumber('6')">6</button>
+            <button class="text-white text-xl h-[50px] bg-[#7a9abd] rounded-lg hover:bg-[#0c5db4]" onclick="setOperation('*')">×</button>
+            <button class="text-white text-xl h-[50px] bg-[#7a9abd] rounded-lg hover:bg-[#0c5db4]" onclick="appendNumber('1')">1</button>
+            <button class="text-white text-xl h-[50px] bg-[#7a9abd] rounded-lg hover:bg-[#0c5db4]" onclick="appendNumber('2')">2</button>
+            <button class="text-white text-xl h-[50px] bg-[#7a9abd] rounded-lg hover:bg-[#0c5db4]" onclick="appendNumber('3')">3</button>
+            <button class="text-white text-xl h-[50px] bg-[#7a9abd] rounded-lg hover:bg-[#0c5db4]" onclick="setOperation('-')">−</button>
+            <button class="text-white text-xl h-[50px] bg-[#7a9abd] rounded-lg hover:bg-[#0c5db4]" onclick="appendNumber('0')">0</button>
+            <button class="text-white text-xl h-[50px] bg-[#7a9abd] rounded-lg hover:bg-[#0c5db4]" onclick="calculate()">=</button>
+            <button class="text-white text-xl h-[50px] bg-[#7a9abd] rounded-lg hover:bg-[#0c5db4]" onclick="setOperation('+')">+</button>
+            <button class="text-white text-xl h-[50px] bg-[#dc3545] rounded-lg hover:bg-[#5c181e]" onclick="clearDisplay()">C</button>
+        </div>
+    </div>
+
+    <script>
+        let currentInput = '0';
+        let previousInput = '';
+
+        function updateDisplay() {
+            document.getElementById('display').innerText = currentInput;
+        }
+
+        function appendNumber(number) {
+            if (currentInput === '0') {
+                currentInput = number;
+            } else {
+                currentInput += number;
+            }
+            updateDisplay();
+        }
+
+        function setOperation(op) {
+          
+            operator = op;
+            previousInput = currentInput;
+            currentInput = '';
+        }
+
+        function calculate() {
+
+
+            const current = parseInt(currentInput);
+            const previous = parseInt(previousInput);
+
+            let result;
+            switch (operator) {
+                case '+':
+                    result =previous + current;
+                    break;
+                case '-':
+                    result =(previous - current);
+                    break;
+                case '*':
+                    result = previous * current;
+                    break;
+                case '/':
+                    result = previous / current;
+                    break;
+                default:
+                    return;
+            }
+
+            currentInput = result.toString();
+            previousInput = '';
+            updateDisplay();
+        }
+
+        function clearDisplay() {
+            currentInput = '0';
+            previousInput = '';
+            updateDisplay();
+        }
+    </script>
+</body>
+</html>
